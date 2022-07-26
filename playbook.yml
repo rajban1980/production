@@ -6,5 +6,5 @@
 
           - name: Copy content to the file 
             copy:
-                    content: "Webserver {{ ansible_fqdn }}"
-                    path: /tmp/test   
+                   content: "Webserver {{ ansible_fqdn }}"
+                   dest: /tmp/test   
