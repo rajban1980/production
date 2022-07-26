@@ -1,0 +1,10 @@
+- hosts: webservers
+  become: true
+  tasks:
+          - name: create directory
+            file: path=/tmp/test  state=directory
+
+          - name: Copy content to the file 
+            copy:
+                    content: "Webserver {{ ansible_fqdn }}"
+                    path: /tmp/test   
